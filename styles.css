@@ -1,60 +1,86 @@
 body {
-    color: yellow;
-    background: black;
-    margin: 0px;
+    color: #fff;
+    background: linear-gradient(135deg, #000010 0%, #0c0c22 50%, #12122a 100%);
+    margin: 0;
     font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
-}
-
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
-}
-
-.chamada {
-    background: rgb(184, 156, 213);
-    padding-bottom: 80px;
     padding-top: 80px;
+}
+
+/* CABEÇALHO */
+header {
+    background: rgba(20, 20, 40, 0.95);
+    border-bottom: 3px solid rgb(42, 122, 228);
+    padding: 20px;
+    font-size: 36px;
+    font-weight: 700;
+    color: rgb(42, 122, 228);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* CHAMADA PRINCIPAL */
+.chamada {
+    background: linear-gradient(90deg, #4b2ca0, #281772);
+    color: #fff;
+    padding: 80px 20px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
 }
 
-.chamada-texto {
-    margin-right: 5%;
+.chamada h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
 }
 
-h1 {
-    font-size: 40px;
+.chamada p {
+    font-size: 22px;
+    color: #ffec80;
 }
 
-p {
-    font-size: 20px;
-}
-
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-}
-
+/* SEÇÃO DE CATEGORIAS */
 .categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
-}
-
-.categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
-}
-
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
+    padding: 50px 20px;
 }
 
 .categoria h2 {
     color: rgb(42, 122, 228);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* CARROSSEL DE VÍDEOS */
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+}
+
+.categoria-videos a {
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.categoria-videos img {
+    height: 200px;
+    border-radius: 10px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.categoria-videos img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(42, 122, 228, 0.8);
 }
